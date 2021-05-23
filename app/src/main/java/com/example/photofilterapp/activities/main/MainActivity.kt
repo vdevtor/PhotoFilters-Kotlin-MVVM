@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.provider.MediaStore
 import com.example.photofilterapp.activities.editimage.EditImageActivity
+import com.example.photofilterapp.activities.savedimages.SavedImagesActivity
 import com.example.photofilterapp.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
@@ -28,6 +29,11 @@ class MainActivity : AppCompatActivity() {
             ).also { pickerIntent ->
                 pickerIntent.addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION)
                 startActivityForResult(pickerIntent, REQUEST_CODE_PICK_IMAGE)
+            }
+        }
+        binding.buttonViewSavedImages.setOnClickListener {
+            Intent(applicationContext, SavedImagesActivity::class.java).also {
+                startActivity(it)
             }
         }
     }
