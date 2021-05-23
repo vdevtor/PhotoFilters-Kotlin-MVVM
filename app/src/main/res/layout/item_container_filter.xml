@@ -20,7 +20,7 @@
         android:id="@+id/textFilterName"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/_4sdp"
+        android:layout_marginTop="@dimen/_2sdp"
         android:ellipsize="end"
         android:fontFamily="@font/poppins_regular"
         android:gravity="center"
