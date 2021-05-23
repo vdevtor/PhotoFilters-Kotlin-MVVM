@@ -34,25 +34,25 @@
             android:includeFontPadding="false"
             android:text="@string/apply_filter"
             android:textColor="@color/white"
-            android:textSize="@dimen/_14ssp"/>
+            android:textSize="@dimen/_14ssp" />
 
         <androidx.appcompat.widget.AppCompatImageView
             android:id="@+id/imageSave"
             android:layout_width="@dimen/_22sdp"
             android:layout_height="@dimen/_22sdp"
             android:src="@drawable/ic_done"
-            app:tint="@color/white"/>
+            app:tint="@color/white" />
 
     </LinearLayout>
-    
+
     <androidx.appcompat.widget.AppCompatImageView
         android:id="@+id/imagePreView"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:scaleType="centerCrop"
         android:visibility="invisible"
-        app:layout_constraintTop_toBottomOf="@id/layoutHeader"
-        app:layout_constraintBottom_toTopOf="@id/filtersRecyclerView"/>
+        app:layout_constraintBottom_toTopOf="@id/filtersRecyclerView"
+        app:layout_constraintTop_toBottomOf="@id/layoutHeader" />
 
     <ProgressBar
         android:id="@+id/previewProgressBar"
@@ -61,8 +61,7 @@
         app:layout_constraintBottom_toBottomOf="@id/imagePreView"
         app:layout_constraintEnd_toEndOf="@id/imagePreView"
         app:layout_constraintStart_toStartOf="@id/imagePreView"
-        app:layout_constraintTop_toTopOf="@id/imagePreView"
-        />
+        app:layout_constraintTop_toTopOf="@id/imagePreView" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/filtersRecyclerView"
@@ -79,6 +78,17 @@
         app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
         app:layout_constraintBottom_toBottomOf="parent"
         tools:listitem="@layout/item_container_filter" />
+
+    <ProgressBar
+        android:id="@+id/imageFiltersProgressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@id/filtersRecyclerView"
+        app:layout_constraintEnd_toEndOf="@id/filtersRecyclerView"
+        app:layout_constraintStart_toStartOf="@id/filtersRecyclerView"
+        app:layout_constraintTop_toTopOf="@id/filtersRecyclerView"
+        />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
